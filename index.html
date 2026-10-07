@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DRAS UCSB — a class-project prototype for survivor-controlled documentation, reporting choices, report tracking, and verified UCSB / Isla Vista resources." />
+  <title>DRAS UCSB | Document. Report. Advocate. Support.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="emergency-bar">
+    <div class="container emergency-inner">
+      <strong>Immediate danger or emergency?</strong>
+      <span>Call <a href="tel:911">911</a>. This prototype does not transmit emergency reports.</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="DRAS UCSB home">
+        <img src="assets/dras-logo.png" alt="DRAS UCSB — Document, Report, Advocate, Support" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#workflow">How It Works</a>
+        <a href="#tracker">Tracking</a>
+        <a href="#reporting">Official Reporting</a>
+        <a href="#support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Document. Report. Advocate. Support.</p>
+          <h1>Your report should not disappear after you send it.</h1>
+          <p class="hero-text">
+            DRAS UCSB is a class-project prototype designed around survivor control: document what happened,
+            preserve supporting material, choose where a report is sent, and keep a clear record of what happens afterward.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#workflow">See the DRAS concept</a>
+            <a class="btn btn-secondary" href="#reporting">Use official reporting links</a>
+          </div>
+          <p class="prototype-note">
+            <strong>Prototype only:</strong> DRAS does not currently submit reports, receive case updates, or integrate with UCSB or law enforcement.
+            The official links below go directly to the agencies that actually receive reports.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="DRAS prototype report timeline">
+          <img src="assets/report-timeline.png" alt="Concept DRAS report timeline showing submission, receipt, review, and follow-up status" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Why DRAS exists</p>
+          <h2>The issue is not only being able to report. It is the aftermath of that report.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            Survivors may need time before deciding whether to report. They may also want a reliable record of what they documented,
+            what evidence they preserved, where information was sent, and whether a response was received.
+          </p>
+          <p>
+            DRAS is designed as an additional documentation and tracking layer — not a replacement for UCSB Title IX, CARE,
+            police, medical services, or community survivor organizations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="workflow">
+      <div class="container">
+        <p class="eyebrow">Prototype workflow</p>
+        <h2>Document first. Decide where it goes. Track what happens next.</h2>
+
+        <div class="workflow-grid">
+          <div class="phone-showcase">
+            <img src="assets/start-report.png" alt="DRAS concept Start a Report screen" />
+          </div>
+
+          <div class="steps-stack">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Build a private record</h3>
+                <p>Save date, time, location, your recollection, attacker description, witness information, images, screenshots, and other documentation.</p>
+              </div>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Choose the destination</h3>
+                <p>Keep the record private, use UCSB’s official Title IX process, or report to the appropriate law-enforcement agency.</p>
+              </div>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Keep the paper trail</h3>
+                <p>The DRAS concept centers a timeline of when materials were created, sent, confirmed, updated, or still awaiting a response.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tracker">
+      <div class="container tracker-grid">
+        <div class="tracker-copy">
+          <p class="eyebrow">Report tracking concept</p>
+          <h2>See exactly what was sent, where it went, and what has — or has not — happened.</h2>
+          <p class="body-copy">
+            In a future integrated system, a survivor could keep submission receipts and verified updates in one timeline.
+            DRAS would not infer an agency’s actions: an update would only appear when the survivor adds it or when the receiving system confirms it.
+          </p>
+
+          <div class="destination-tabs" role="group" aria-label="Example timeline destination">
+            <button class="timeline-tab active" data-destination="ucsb">Example: UCSB</button>
+            <button class="timeline-tab" data-destination="police">Example: Law Enforcement</button>
+          </div>
+
+          <div class="timeline-card" aria-live="polite">
+            <div class="timeline-header">
+              <div><span>Destination</span><strong id="timeline-destination">UCSB Title IX / DHP</strong></div>
+              <div><span>Current status</span><strong id="timeline-status">Awaiting follow-up</strong></div>
+            </div>
+            <ol class="timeline-list" id="timeline-list">
+              <li class="done"><span>Report submitted</span><time>Oct. 10 — 3:12 PM</time></li>
+              <li class="done"><span>Submission confirmation saved</span><time>Oct. 10 — 3:13 PM</time></li>
+              <li class="done"><span>Follow-up communication logged</span><time>Oct. 10 — 4:45 PM</time></li>
+              <li class="waiting"><span>No new response logged</span><time>Current</time></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="tracker-phone">
+          <img src="assets/report-timeline.png" alt="DRAS concept timeline interface" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="privacy">
+      <div class="container split privacy-grid">
+        <div>
+          <p class="eyebrow">Privacy & scope</p>
+          <h2>A record for the survivor — not a public accusation page.</h2>
+        </div>
+        <div class="privacy-list">
+          <div class="privacy-item"><span class="check">✓</span><div><h3>Private by default</h3><p>The survivor controls the record until they choose to share it.</p></div></div>
+          <div class="privacy-item"><span class="check">✓</span><div><h3>No public guilt determination</h3><p>DRAS is not designed to publish accused individuals or decide whether someone is guilty.</p></div></div>
+          <div class="privacy-item"><span class="check">✓</span><div><h3>Exportable documentation</h3><p>A future version could organize the survivor’s own documentation and receipts into a record they can keep or share.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reporting">
+      <div class="container">
+        <p class="eyebrow">Official reporting options</p>
+        <h2>These are the systems that actually receive reports.</h2>
+        <p class="section-intro">Use the option that matches where the incident occurred and what kind of response you want. These links leave the DRAS prototype and go to official agency pages.</p>
+
+        <div class="resource-grid resource-grid-three">
+          <article class="resource-card featured-card">
+            <div class="resource-tag">University process</div>
+            <h3>UCSB Title IX / DHP</h3>
+            <p>UCSB’s Title IX Compliance & Discrimination and Harassment Prevention Office receives reports involving sexual violence, sexual harassment, discrimination, and related prohibited conduct.</p>
+            <dl>
+              <div><dt>Phone</dt><dd><a href="tel:+18058932701">805-893-2701</a></dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:tixoffice@titleix.ucsb.edu">tixoffice@titleix.ucsb.edu</a></dd></div>
+              <div><dt>Office</dt><dd>3211 Phelps Hall</dd></div>
+            </dl>
+            <div class="card-actions">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://uctitleix.i-sight.com/portal/Santa%20Barbara">File an incident report</a>
+              <a class="text-link" target="_blank" rel="noopener" href="https://titleix-dhp.ucsb.edu/reporting/overview">Reporting overview ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-tag">Campus / university property</div>
+            <h3>UCSB Police Department</h3>
+            <p>UCPD handles crimes on UCSB property, including campus and university housing. Its online form is for non-urgent incidents; urgent matters should be called in.</p>
+            <dl>
+              <div><dt>Emergency</dt><dd><a href="tel:911">911</a></dd></div>
+              <div><dt>Urgent / time-sensitive</dt><dd><a href="tel:+18058933446">805-893-3446</a></dd></div>
+              <div><dt>Location</dt><dd>Public Safety Building 574</dd></div>
+            </dl>
+            <div class="card-actions">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.police.ucsb.edu/report-crime">UCPD reporting page</a>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-tag">Isla Vista / off university property</div>
+            <h3>Isla Vista Foot Patrol</h3>
+            <p>The Santa Barbara County Sheriff’s Office Isla Vista Foot Patrol handles crimes in Isla Vista that occur off university property.</p>
+            <dl>
+              <div><dt>Station</dt><dd>6504 Trigo Rd., Isla Vista</dd></div>
+              <div><dt>IVFP</dt><dd><a href="tel:+18056814179">805-681-4179</a></dd></div>
+              <div><dt>Non-emergency dispatch</dt><dd><a href="tel:+18056832724">805-683-2724</a></dd></div>
+            </dl>
+            <div class="card-actions">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.sbsheriff.org/command-and-divisions/law-enforcement-operations/south-county-operations-division/isla-vista-foot-patrol/">IV Foot Patrol info</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="support">
+      <div class="container">
+        <p class="eyebrow">Confidential & community support</p>
+        <h2>You can get support without starting with a formal report.</h2>
+        <p class="section-intro">These services can help someone understand options, receive confidential support, or connect with care in UCSB and Isla Vista.</p>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <div class="support-icon">C</div>
+            <div>
+              <div class="resource-tag">Free & confidential</div>
+              <h3>UCSB CARE</h3>
+              <p>CARE provides confidential advocacy for sexual violence, relationship violence, and stalking. Advocates can explain rights and options and support a survivor whether or not they choose to report.</p>
+              <p><strong>24/7 confidential line:</strong> <a href="tel:+18058934613">805-893-4613</a></p>
+              <p><strong>Campus:</strong> Student Resource Building, 2nd floor</p>
+              <p><strong>Isla Vista satellite:</strong> Gaucho Support Center, 970 Embarcadero Del Mar</p>
+              <a class="text-link" target="_blank" rel="noopener" href="https://care.ucsb.edu/">UCSB CARE ↗</a>
+            </div>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">S</div>
+            <div>
+              <div class="resource-tag">Community survivor support</div>
+              <h3>STESA</h3>
+              <p>Standing Together to End Sexual Assault provides confidential counseling and support for sexual-assault survivors and loved ones. The Isla Vista Community Services District lists STESA support through the Survivor Resource Center in Isla Vista.</p>
+              <p><strong>24-hour hotline:</strong> <a href="tel:+18055643696">805-564-3696</a></p>
+              <p><strong>IV Survivor Resource Center:</strong> 970 Embarcadero Del Mar</p>
+              <a class="text-link" target="_blank" rel="noopener" href="https://sbstesa.org/">STESA ↗</a>
+            </div>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">M</div>
+            <div>
+              <div class="resource-tag">Mental health support</div>
+              <h3>UCSB CAPS</h3>
+              <p>Counseling & Psychological Services provides counseling and consultation for registered UCSB students, with phone consultation available 24/7.</p>
+              <p><strong>24/7:</strong> <a href="tel:+18058934411">805-893-4411</a></p>
+              <a class="text-link" target="_blank" rel="noopener" href="https://caps.sa.ucsb.edu/">UCSB CAPS ↗</a>
+            </div>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">IV</div>
+            <div>
+              <div class="resource-tag">Local resource directory</div>
+              <h3>Isla Vista Survivor Resources Hub</h3>
+              <p>The Isla Vista Community Services District maintains a local survivor-resource hub covering advocacy, healing, legal options, reporting, and community programs.</p>
+              <a class="text-link" target="_blank" rel="noopener" href="https://islavistacsd.ca.gov/survivor-resources-hub">IV Survivor Resources Hub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section statement-section">
+      <div class="container statement">
+        <p>The issue is not being able to report sexual assault; it is the aftermath of that report.</p>
+        <h2>DRAS provides survivors time.</h2>
+      </div>
+    </section>
+
+    <section class="section sources-section">
+      <div class="container source-wrap">
+        <div>
+          <p class="eyebrow">Prototype note</p>
+          <h2>DRAS UCSB is a classroom concept, not an operating reporting service.</h2>
+        </div>
+        <div class="body-copy">
+          <p>The reporting and support information above links to current official UCSB, Santa Barbara County Sheriff, STESA, CAPS, and Isla Vista Community Services District pages.</p>
+          <p>Before relying on any phone number, address, or procedure in the future, confirm it on the linked official site because services and processes can change.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> DRAS UCSB — Class Project Prototype</p>
+      <p>Document. Report. Advocate. Support.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
